@@ -1,388 +1,362 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>CVPR 2019 Tutorial on Action Classification and Video Modelling</title>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Brave new ideas in motion representations</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/sl-slide.css">
+
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script src="data/id2path.json" charset="utf-8"></script>
     
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <script src="js/animate.js"></script>
 
-    <link rel="stylesheet" href="css/aos.css">
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head>
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
+<body>
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
-
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-
-    <div class="KW_progressContainer">
-      <div class="KW_progressBar">
-
-      </div>
-    </div>
-    <div class="page">
-    <nav id="colorlib-main-nav" role="navigation">
-      <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
-      <div class="js-fullheight colorlib-table">
-        <div class="colorlib-table-cell js-fullheight">
-          <div class="row no-gutters">
-            <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a href="index.html" class="logo">Action Classification and Video Modelling</a></h1>
-              <ul>
-                <li class="active"><a href="index.html"><span><small>01</small>Home</span></a></li>
-                <!-- <li><a href="program.html"><span><small>02</small>Resume</span></a></li>
-                <li><a href="services.html"><span><small>03</small>Services</span></a></li>
-                <li><a href="portfolio.html"><span><small>04</small>Portfolio</span></a></li>
-                <li><a href="blog.html"><span><small>05</small>Blog</span></a></li>
-                <li><a href="contact.html"><span><small>06</small>Contact</span></a></li> -->
-              </ul>
+<!--     Header-->
+    <header class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a id="logo" class="pull-left" href="index.html"></a>
+                <div class="nav-collapse collapse pull-right">
+                    <ul class="nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#program">Program</a></li>
+                        <li><a href="#dates">Dates</a></li>
+                        <li><a href="#submission">Submission</a></li> 
+                        <li><a href="#registration">Registration & Venue</a></li>
+                        <li><a href="#organizers">Organizers</a></li>
+                    </ul>        
+                </div><!--/.nav-collapse -->
             </div>
-          </div>
         </div>
-      </div>
-    </nav>
-    
-    <div id="colorlib-page">
-      <header>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="colorlib-navbar-brand">
-                <a class="colorlib-logo" href="index.html"></span>Action Classification and Video Modelling</a>
-              </div>
-              <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
-            </div>
-          </div>
-        </div>
-      </header>
-    
-      <section class="home-slider owl-carousel js-fullheight">
-        <div class="slider-item js-fullheight">
-          <div class="overlay"></div>
-          <div class="container">
-            <div class="row slider-text align-items-center text-center justify-content-center" data-scrollax-parent="true">
-              <div class="col-md-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-                <p><a href="#" class="scroll">Hello! This is the CVPR 2019 tutorial on</a></p>
-                <h1 class="mb-3" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Action Classification and Video Modelling</h1>
-              </div>
-            </div>
-          </div>
-        </div>
+    </header>
+    <!-- /header -->
+       
+</section>
+<!--/Slider-->
 
-        <!-- <div class="slider-item js-fullheight">
-          <div class="overlay"></div>
-          <div class="container">
-            <div class="row slider-text align-items-center text-center justify-content-center" data-scrollax-parent="true">
-              <div class="col-md-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-                <p><a href="#" class="scroll">I'm from Berlin</a></p>
-                <h1 class="mb-3" data-scrollax="properties: {translateY: '30%', opacity: 1.6}">A Web Designer</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
-      <!-- END slider -->
+<section id="about" >
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span9">
+                <h1>CVPR 2019 Tutorial on <br/>Action Classification and Video Modelling</h1>
+                
 
-      <!-- <section class="ftco-section about-section">
-        <div class="container">
-          <div class="row d-flex" data-scrollax-parent="true">
-            <div class="col-md-4 author-img" style="background-image: url(images/author-1.jpg);" data-scrollax=" properties: { translateY: '-70%'}"></div>
-            <div class="col-md-2"></div>
-            <div class="col-md-6 wrap ftco-animate">
-              <div class="about-desc">
-                <h1 class="bold-text">About</h1>
-                <div class="p-5">
-                  <h2 class="mb-5">Description of the Tutorial</h2>
-                  <p>In the late years Deep Learning has been a great force of change on most Computer Vision and Machine Learning tasks. 
-                  In video analysis problems, such as action recognition and detection, motion analysis and tracking, the progress has arguably been slower, with shallow models remaining surprisingly competitive.
-                  Recent developments~\cite{Tran2014, Feichtenhofer2016, Carreira2017, tran2015learning, Bilen2017, GhodratiGS18, FeichtenhoferPW18, Simonyan2014, KalchbrennerOSD17} have demonstrated that careful model design and end-to-end model training, as well as large and well-annotated datasets, have finally led to strong results using deep architectures for video analysis. 
-                  However, the details and the secrets to achieve good accuracies with deep models are not always transparent. 
-                  Furthermore, it is not always clear whether the networks resulting from end-to-end training are truly providing better video models or if instead are simply overfitting their large capacity to the idiosyncrasies of each dataset. </p>
-                  <p><a href="#">This tutorial aims at giving answers to the aforementioned questions.
-                  Specifically, the core topics to be explored are</a></p>
-                  <ul class="ftco-footer-social list-unstyled mt-4">
-                    <li><a href="#">What are the state-of-the-art video representations and action classification models and how does one train them?</a></li>
-                    <li><a href="#">What does constitute a strong video representation?</a></li>
-                    <li><a href="#">Are short and long videos to be treated equally when training action classifiers?</a></li>
-                    <li><a href="#">Are shallow models still relevant for state-of-the-art classification?</a></li>
-                    <li><a href="#">How to train an action classification system in an unsupervised manner, when supervised labels are not enough?</a></li>
-                    <li><a href="#">Relevant benchmarks and challenges </a></li>
-                  </ul>
-                  <p>This tutorial is organized by experts on action classification and video representation learning: a) Dr. E. Gavves, Assistant Professor in the University of Amsterdam, The Netherlands, b) J. Carreira, Research Scientist in DeepMind, UK, c) Dr. B. Fernando, Research Scientist A*Star, Singapore, d) Dr. C. Feichtenhofer, Senior Researcher in Facebook FAIR, US and, e) Dr. L. Torresani, Associate Professor at Dartmouth College and Research Scientist at Facebook FAIR, USA.
+                <p class="lead">Together with the <a href="http://cvpr2019.thecvf.com/">Computer Vision and Pattern Recognition (CVPR)</a> 2019.
+                </p> 
+                
+
+                <h3>Description of the tutorial and its relevance</h3>
+                <p class="lead">
+                In the late years Deep Learning has been a great force of change on most Computer Vision and Machine Learning tasks. 
+                In video analysis problems, such as action recognition and detection, motion analysis and tracking, the progress has arguably been slower, with shallow models remaining surprisingly competitive.
+                Recent developments (Tran et al., 2014), (Feichtenhofer et al., 2016), (Carreira et al., 2017), (Tran et al., 2015), (Bilen et al. 2017), (Ghodrati et al., 2018), (Feichtenhofer et al. 2018), (Simonyan et al., 2014), (Kalchbrenner et al., 2017) have demonstrated that careful model design and end-to-end model training, as well as large and well-annotated datasets, have finally led to strong results using deep architectures for video analysis. 
+                However, the details and the secrets to achieve good accuracies with deep models are not always transparent. 
+                Furthermore, it is not always clear whether the networks resulting from end-to-end training are truly providing better video models or if instead are simply overfitting their large capacity to the idiosyncrasies of each dataset.
+                </p>
+
+                <p>This tutorial aims at giving answers to the aforementioned questions.
+                  Specifically, the core topics to be explored are</p>
+
+                <p class="lead">
+                - What are the state-of-the-art video representations and action classification models and how does one train them?<br/>
+                - What does constitute a strong video representation?<br/>
+                - Are short and long videos to be treated equally when training action classifiers?<br/>
+                - Are shallow models still relevant for state-of-the-art classification? <br/>
+                - How to train an action classification system in an unsupervised manner, when supervised labels are not enough?<br/>
+                - Relevant benchmarks and challenges<br/>
+                </p>
+
+                <p>This tutorial is organized by experts on action classification and video representation learning: a) Dr. E. Gavves, Assistant Professor in the University of Amsterdam, The Netherlands, b) J. Carreira, Research Scientist in DeepMind, UK, c) Dr. B. Fernando, Research Scientist A*Star, Singapore, d) Dr. C. Feichtenhofer, Senior Researcher in Facebook FAIR, US and, e) Dr. L. Torresani, Associate Professor at Dartmouth College and Research Scientist at Facebook FAIR, USA.
                   </p>
-                </div>
-              </div>
+
+                <h3>Topics</h3>
+                <p class="lead">
+                The tutorial focuses on the following topics: </p>
+               
+               <p class="lead">
+                - Deep learning for action classification and optical flow. Discuss the latest modern deep networks for action classification, including C3D (Tran et al., 2014), I3D (Carreira et al. 2017), Two-Stream models (Simonyan et al. 2014), Two-stream-fusion (Feichtenhofer et al., 2016), Dynamic Images(Bilen et al., 2016).<br/>
+                - Deep networks for video modeling. Discuss and analyze various options for modeling videos, including TSN (Wang et al., 2018), spatiotemporal (Tran et al. 2015) and factorized spatiotemporal convolutions (Tran et al., 2018), TimeAligned DenseNets (Ghodrati et al., 2018), Dynamic Image Networks (Bilen et al. 2017).<br/>
+                - Deep spatiotemporal models beyond classification. While in the Computer Vision community video models have been designed primarily for action classification, their applicability extends to video generative models (Kalchbrenner et al., 2017), video compression (Wu et al., 2018), visualization (Feichtenhofer et al., 2018), velocity estimation (Kampelmuhler et al., 2018), tracking (Tao et al., 2016) and spatiotemporal object detection (Feichtenhofer et al., 2017), and future video prediction (Ghodrati et al., 2018).<br/>
+                - Unsupervised video representation learning. Analogously to the still-image domain, even for video it has been customary to fine-tune pretrained video models on the target dataset. However, this is not always optimal, due to large gaps between the source and the target domain~\cite{ (Shkodrani et al., 2018) or because of unconventional architectures (Ghodrati et al., 2018). More importantly, while supervised learning certainly results in highly accurate models, it does not take advantage of the plethora of unlabelled video available. We discuss alternatives on training video representations models either in an unsupervised or self-supervised manner, including arrow-of-time (Wei et al., 2018), audio-video synchronization, or odd-one-out models (Fernando et al., 2017).<br/>
+                - Long-term video understanding. The majority of action classification and video representation systems focus on rather short video sequences, typically no more than 10 seconds long. However, applications often require processing much longer videos, or even streaming videos. We discuss models that are specifically designed to handle long videos and capture the spatiotemporal intricacies involved, like Timeception (Hussein et al, 2019) and VideoGraph (Hussein et al., 2019).<br/>
+                - Large-scale video processing and evaluation. Careful evaluation of action classifiers and video representations is crucial for developing the next generation of models. Interestingly, while current benchmarks do measure well the accuracy of action classifiers, it is not always clear how to evaluate the capacity of temporal models in modeling the sequence itself. We discuss various benchmarks and frameworks for evaluating action classification, as well as for evaluating directly video representations.<br/>
+                </p>
+
+                
             </div>
-          </div>
         </div>
-      </section> -->
+    </div>
+</section>
 
-      <!-- <section class="ftco-section topics-section">
-        <div class="container">
-          <div class="row d-flex" data-scrollax-parent="true">
-            <div class="col-md-2"></div>
-            <div class="col-md-6 wrap ftco-animate">
-              <div class="about-desc">
-                <h1 class="bold-text">Topics</h1>
-                <div class="p-5">
-                  <h2 class="mb-5">Topics</h2>
-                  <p><a href="#">The tutorial focuses on the following topics:</a></p>
-                  <ul class="ftco-footer-social list-unstyled mt-4">
-                    <li><a href="#">Deep learning for action classification and optical flow. Discuss the latest modern deep networks for action classification, including C3D (Tran et al., 2014), I3D (Carreira et al. 2017), Two-Stream models (Simonyan et al. 2014), Two-stream-fusion (Feichtenhofer et al., 2016), Dynamic Images(Bilen et al., 2016).</a></li>
-                    <li><a href="#">Deep networks for video modeling. Discuss and analyze various options for modeling videos, including TSN (Wang et al., 2018), spatiotemporal (Tran et al. 2015) and factorized spatiotemporal convolutions (Tran et al., 2018), TimeAligned DenseNets (Ghodrati et al., 2018), Dynamic Image Networks (Bilen et al. 2017)</a></li>
-                    <li><a href="#">Deep spatiotemporal models beyond classification. While in the Computer Vision community video models have been designed primarily for action classification, their applicability extends to video generative models (Kalchbrenner et al., 2017), video compression (Wu et al., 2018), visualization (Feichtenhofer et al., 2018), velocity estimation (Kampelmuhler et al., 2018), tracking (Tao et al., 2016) and spatiotemporal object detection (Feichtenhofer et al., 2017), and future video prediction (Ghodrati et al., 2018).</a></li>
-                    <li><a href="#">Unsupervised video representation learning. Analogously to the still-image domain, even for video it has been customary to fine-tune pretrained video models on the target dataset. However, this is not always optimal, due to large gaps between the source and the target domain~\cite{ (Shkodrani et al., 2018) or because of unconventional architectures (Ghodrati et al., 2018). More importantly, while supervised learning certainly results in highly accurate models, it does not take advantage of the plethora of unlabelled video available. We discuss alternatives on training video representations models either in an unsupervised or self-supervised manner, including arrow-of-time (Wei et al., 2018), audio-video synchronization, or odd-one-out models (Fernando et al., 2017).</a></li>
-                    <li><a href="#">Long-term video understanding. The majority of action classification and video representation systems focus on rather short video sequences, typically no more than 10 seconds long. However, applications often require processing much longer videos, or even streaming videos. We discuss models that are specifically designed to handle long videos and capture the spatiotemporal intricacies involved, like Timeception (Hussein et al, 2019) and VideoGraph (Hussein et al., 2019).</a></li>
-                    <li><a href="#">Large-scale video processing and evaluation. Careful evaluation of action classifiers and video representations is crucial for developing the next generation of models. Interestingly, while current benchmarks do measure well the accuracy of action classifiers, it is not always clear how to evaluate the capacity of temporal models in modeling the sequence itself. We discuss various benchmarks and frameworks for evaluating action classification, as well as for evaluating directly video representations.</a></li>
-                  </ul>
-                </div>
-              </div>
+
+
+<section id="services">   
+
+<div class="container" id ="program">
+        <div class="row-fluid">
+            <div class="span9">
+                <h1>Program</h1>
+                <p class="lead">
+                Date: 21 july 2017.
+                </p>
+		<table class="lead" style="border-style: groove;width:1200px" border="1" >
+		<tr>
+			<th width="20%">Time</th>
+    			<th width="40%">Event</th>
+    			<th width="40%">Description</th>
+  		</tr>
+		<tr><td>8.45 - 9.00   </td> <td> Welcome to the workshop </td> <td> Information</td> </tr>
+                <tr><td>9.00 - 10.00   </td> <td> Invited speaker 1  </br> <a href="http://people.csail.mit.edu/mrub/"> Dr. Miki Rubinstein</a> </td> <td> Talk 1 </td> </tr>
+		<tr><td>10.00 - 10.20  </td> <td> Break </td> <td> Coffee </td> </tr>
+                <tr><td>10.20 - 11.20  </td> <td> Invited speaker 2 </br>   <a href="http://cis.jhu.edu/~rvidal/">Professor Rene Vidal</a> </td> <td>  Talk 2 </td> </tr>
+                <tr><td>11.25 - 11.45  </td> <td> <a href="https://openreview.net/pdf?id=HJfDVHkag">Unsupervised Human Action Detection by Action Matching</a> </td> <td>Oral Presentation 1 by Basura Fernando, Sareh Shirazi, Stephen Gould </td> </tr>
+		<tr><td>11.45 - 13.30  </td> <td> Lunch (on your own) </td> <td> Poster session </td> </tr>
+
+                <tr><td>13.30 - 14.15  </td> <td> Invited speaker 4 </br>  <a href="http://www.cs.rochester.edu/u/jluo/">Professor Jiebo Luo</a>  </td> <td> Talk 4  </td> </tr>
+                <tr><td>14.15 - 14.30  </td> <td> <a href="https://openreview.net/pdf?id=BJrN0GhTl">RATM: Recurrent Attentive Tracking Model</a> </td> <td> Oral Presentation 2 by Samira Ebrahimi Kahou, Vincent Michalski, Roland Memisevic, Christopher Pal, Pascal Vincent </td> </tr>
+		<tr><td>14.30 - 14.45  </td> <td> Break </td> <td> Coffee </td> </tr>
+                <tr><td>14.45 - 15.30  </td> <td> Invited speaker 5 </br> <a href="http://www.ceessnoek.info/">Professor Cees G.M. Snoek</a></td> <td> Talk 5 </td> </tr>
+
+                <tr><td>15.30 - 15.45  </td> <td> <a href="https://openreview.net/pdf?id=BJWBzOBTx">Interpretable 3D Human Action Analysis with Temporal Convolutional Networks</a> </td> <td> Oral Presentation 3 by Tae Soo Kim, Austin Reiter </td> </tr>
+                <tr><td>15.45 - 16.00  </td> <td> <a href="https://openreview.net/pdf?id=H1gaV4mae">Learning Dynamic GMM for Attention Distribution on Single-face Videos </a> </td> <td> Oral Presentation 4 by Yun Ren, Zulin Wang, Mai Xu, Haoyu Dong, Shengxi Li </td> </tr>
+                <!--tr><td>16.00 - 16.15  </td> <td> <a href="https://openreview.net/pdf?id=SJcvXCBax">Optical Acceleration for Motion Description in Videos </a></td> <td> Oral Presentation 5 by Anitha Edison, Jiji C. V. </td> </tr-->
+                <tr><td>16.00 - 16.45  </td> <td> Invited speaker 3 </br>  <a href="http://www.stat.ucla.edu/~yuille/">Professor Alan Yuille </a>  </td> <td>  Talk 3 </td> </tr>
+		<tr><td>16.45 - 17.30  </td> <td> Poster session  </td> <td> Poster session  </td> </tr>		
+		</table>
+                
             </div>
-          </div>
         </div>
-      </section> -->
-
-      <!-- <section class="ftco-section">
-        <div class="container">
-          <div class="row justify-content-center mb-5 pb-5">
-            <div class="col-md-7 text-center heading-section ftco-animate">
-              <span>What i do</span>
-              <h2>My services</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-              <div class="media block-6 services p-3 py-4 d-block text-center">
-                <div class="icon mb-3"><span class="icon-layers"></span></div>
-                <div class="media-body">
-                  <h3 class="heading">UI/UX Design</h3>
-                  <h3 class="heading">Mobile App Design</h3>
-                  <h3 class="heading">Responsive Design</h3>
-                </div>
-              </div>      
-            </div>
-            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-              <div class="media block-6 services p-3 py-4 d-block text-center">
-                <div class="icon mb-3"><span class="icon-gears"></span></div>
-                <div class="media-body">
-                  <h3 class="heading">Product Strategy</h3>
-                  <h3 class="heading">Design Sprints</h3>
-                  <h3 class="heading">UX Strategy</h3>
-                </div>
-              </div>      
-            </div>
-            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-              <div class="media block-6 services p-3 py-4 d-block text-center">
-                <div class="icon mb-3"><span class="icon-code"></span></div>
-                <div class="media-body">
-                  <h3 class="heading">HTML/CSS</h3>
-                  <h3 class="heading">Prototyping</h3>
-                  <h3 class="heading">User Testing</h3>
-                </div>
-              </div>    
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="ftco-section">
-        <div class="container">
-          <div class="row justify-content-center mb-5 pb-5">
-            <div class="col-md-7 text-center heading-section ftco-animate">
-              <span>Portfolio</span>
-              <h2>Checkout a few of my works</h2>
-            </div>
-          </div>
-          <div class="row no-gutters">
-          <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-            <a href="portfolio-single.html" class="image d-flex justify-content-center align-items-center" style="background-image: url('images/work-1.jpg'); " data-scrollax=" properties: { translateY: '-30%'}">
-              <div class="icon d-flex text-center justify-content-center align-items-center">
-                <span class="icon-search"></span>
-              </div>
-            </a>
-            <div class="text">
-              <h4 class="subheading">Illustration</h4>
-              <h2 class="heading"><a href="portfolio-single.html">Even the all-powerful Pointing has no control</a></h2>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text.</p>
-              <p><a href="#">View Project</a></p>
-            </div>
-          </div>
-          <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-            <a href="portfolio-single.html" class="image order-2 d-flex justify-content-center align-items-center" style="background-image: url('images/work-2.jpg'); " data-scrollax=" properties: { translateY: '-30%'}">
-              <div class="icon d-flex text-center justify-content-center align-items-center">
-                <span class="icon-search"></span>
-              </div>
-            </a>
-            <div class="text order-1">
-              <h4 class="subheading">Application</h4>
-              <h2 class="heading"><a href="portfoli-singleo.html">Even the all-powerful Pointing has no control</a></h2>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text.</p>
-              <p><a href="#">View Project</a></p>
-            </div>
-          </div>
-          <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-            <a href="portfolio-single.html" class="image d-flex justify-content-center align-items-center" style="background-image: url('images/work-3.jpg'); " data-scrollax=" properties: { translateY: '-30%'}">
-              <div class="icon d-flex text-center justify-content-center align-items-center">
-                <span class="icon-search"></span>
-              </div>
-            </a>
-            <div class="text">
-              <h4 class="subheading">Web Design</h4>
-              <h2 class="heading"><a href="portfolio-single.html">Even the all-powerful Pointing has no control</a></h2>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text.</p>
-              <p><a href="#">View Project</a></p>
-            </div>
-          </div>
-          <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-            <a href="portfolio-single.html" class="image order-2 d-flex justify-content-center align-items-center" style="background-image: url('images/work-4.jpg'); " data-scrollax=" properties: { translateY: '-30%'}">
-              <div class="icon d-flex text-center justify-content-center align-items-center">
-                <span class="icon-search"></span>
-              </div>
-            </a>
-            <div class="text order-1">
-              <h4 class="subheading">Application</h4>
-              <h2 class="heading"><a href="portfoli-singleo.html">Even the all-powerful Pointing has no control</a></h2>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text.</p>
-              <p><a href="#">View Project</a></p>
-            </div>
-          </div>
-          <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-            <a href="portfolio-single.html" class="image d-flex justify-content-center align-items-center" style="background-image: url('images/work-5.jpg'); " data-scrollax=" properties: { translateY: '-30%'}">
-              <div class="icon d-flex text-center justify-content-center align-items-center">
-                <span class="icon-search"></span>
-              </div>
-            </a>
-            <div class="text">
-              <h4 class="subheading">Animation</h4>
-              <h2 class="heading"><a href="portfoli-singleo.html">Even the all-powerful Pointing has no control</a></h2>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text.</p>
-              <p><a href="#">View Project</a></p>
-            </div>
-          </div>
-          <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-            <a href="portfolio-single.html" class="image order-2 d-flex justify-content-center align-items-center" style="background-image: url('images/work-6.jpg'); " data-scrollax=" properties: { translateY: '-30%'}">
-              <div class="icon d-flex text-center justify-content-center align-items-center">
-                <span class="icon-search"></span>
-              </div>
-            </a>
-            <div class="text order-1">
-              <h4 class="subheading">Branding</h4>
-              <h2 class="heading"><a href="portfoli-singleo.html">Even the all-powerful Pointing has no control</a></h2>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text.</p>
-              <p><a href="#">View Project</a></p>
-            </div>
-          </div>
-        </div>
-        </div>
-      </section>
-
-      <section class="ftco-section ftco-counter" id="section-counter">
-        <div class="container">
-          <div class="row justify-content-center mb-5 pb-5">
-            <div class="col-md-7 text-center heading-section ftco-animate">
-              <span>Portfolio</span>
-              <h2>I love to share my achievements</h2>
-            </div>
-          </div>
-          <div class="row d-flex justify-content-start">
-            <div class="col-md-5 col-sm-5 counter-wrap ftco-animate">
-              <div class="block-18">
-                <div class="text">
-                  <span class="ftco-label">Clients</span>
-                  <strong class="number" data-number="420">0</strong>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row d-flex justify-content-center">
-            <div class="col-md-5 col-sm-5 counter-wrap ftco-animate">
-              <div class="block-18">
-                <div class="text">
-                  <span class="ftco-label">Project done</span>
-                  <strong class="number" data-number="890">0</strong>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row d-flex justify-content-end">
-            <div class="col-md-5 counter-wrap ftco-animate">
-              <div class="block-18">
-                <div class="text">
-                  <span class="ftco-label">Cups of coffee</span>
-                  <strong class="number" data-number="1000">0</strong>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
-      
-      <footer class="ftco-footer ftco-bg-dark ftco-section">
-        <div class="container">
-          <div class="row mb-5 justify-content-center">
-            <div class="col-md-5 text-center">
-              <div class="ftco-footer-widget mb-5">
-                <ul class="ftco-footer-social list-unstyled">
-                  <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                  <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                  <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                </ul>
-              </div>
-              <div class="ftco-footer-widget">
-                <h2 class="mb-3">Contact Us</h2>
-                <p class="h3 email"><a href="#">egavves@uva.nl</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 text-center">
-
-              <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-      Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true" style="color: red;"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-            </div>
-          </div>
-        </div>
-      </footer>
-
-      <!-- loader -->
-      <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-      </div>
-
     </div>
 
+</section>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/jquery.timepicker.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
-    <script src="js/main.js"></script>
-    
-  </body>
+
+
+<section id="dates">
+    <div class="container" >
+        <div class="center">
+            <h3>Important Dates</h3>
+            <p class="lead">Together with the <a href="http://cvpr2017.thecvf.com/">Computer Vision and Pattern Recognition (CVPR)</a> 2017.</p>
+            <p class="lead">Date of the workshop: 21 July 2017 </p>
+        </div>  
+        <div class="gap"></div>
+        <ul class="gallery col-4">
+            <!--Item 1-->	     
+	
+	    <!--Item 1.1-->
+	    <li>	
+             <p class="lead">4 Page Submission Deadline</p>
+                <div class="desc">
+                    <h5 style="color:red;"><strike>15th May 2017 </strike></h5>
+                </div>
+            </li>
+            <!--/Item 1.1--> 	 
+
+            <!--Item 2-->
+            <li>
+                <p class="lead">4 Page Acceptance</p>
+                <div class="desc">
+                    <h5><strike>22nd May 2017</strike></h5>
+                </div>
+            </li>
+
+            <li>
+                <p class="lead">8 Page Acceptance</p>
+                <div class="desc">
+                    <h5><strike>3rd May 2017</strike></h5>
+                </div>
+            </li>	
+            <!--/Item 2-->
+
+            <!--Item 3-->
+            <li>
+                <p class="lead">8 Page Camera ready</p>
+                <div class="desc">
+                    <h5><strike>15th May 2017</strike></h5>
+                </div>
+            </li>
+            <!--/Item 3--> 
+
+                          
+
+        </ul>
+    </div>
+
+</section>
+
+<section id="services">
+    <div class="container" id="submission">
+        <div class="row-fluid">
+            <div class="span9">
+
+                <h1>Submission</h1>                
+                <h3>Constructive discussion</h3>
+                <p class="lead">
+                The workshop's goal is a constructive, creative and open conversation. In principle we will accept all papers. All reviews will be made publicly available. Reviewers can choose to remain anonymous or to reveal their identity to encourage collaboration and positive feedback. We include poster presentations and will select a few of the best and bravest papers for an oral presentation. 
+                </p>
+
+		<h3>Instructions</h3>                
+                <p class="lead">
+		You can submit papers in two different formats. <br><br><strike>
+1.Full paper submission should include 8 pages of text and should use the CVPR 2017 camera ready format as per the instructions given <a href="http://cvpr2017.thecvf.com/submission/main_conference/author_guidelines">here</a>. Full  paper submission should include 8 pages (excluding references) and will be included in the proceedings of the CVPR17 workshops. Therefore, the deadline for full paper submission is 7th April 2017.<br><br></strike>
+
+2. Authors can also submit 4 Page papers which will be peer reviewed. However, they will not be include in the proceedings. Please follow the 
+ CVPR 2017 camera ready format as per the instructions given <a href="http://cvpr2017.thecvf.com/submission/main_conference/author_guidelines">here</a> but limit your paper to 4 pages excluding references.
+<br><br>
+
+All papers should have the names of the authors, institute and the email address in the header of the paper as per the camera ready format of CVPR 2017. Authors are encouraged to upload their papers in archive.
+                </p>
+
+                <h3>Submit</h3>                
+                <p class="lead">
+                Please use <a href="https://openreview.net/group?id=cv-foundation.org/CVPR/2017/BNMW">OpenReview</a> to submit your paper.
+
+                </p>
+
+                <h3>Proceedings</h3>                
+                <p class="lead">
+                Will appear soon.
+                </p>
+
+
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="registration">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span9">
+                <h1>Registration & venue</h1>
+                <p class="lead">The workshop is together with the <a href="http://cvpr2017.thecvf.com/">Computer Vision and Pattern Recognition (CVPR)</a> 2017.</p>
+                <p class="lead">
+                 Accepted papers must have at least one registered author (this can be a student). 
+                 </p>
+
+
+                <p class="lead">
+                Venue TBD.</p>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="services">
+    <div class="container" id="organizers">
+        <div class="row-fluid">
+            <div class="span9">
+                <h1>Organizers</h1>
+                <p class="lead">
+                <a href="http://www.egavves.com/"> Stratis Gavves</a>,
+                <a href="http://users.cecs.anu.edu.au/~basura/">Basura Fernando</a>,
+                <a href="https://www.cs.rochester.edu/u/cxu22/">  Chenliang Xu</a>,
+                <a href="https://sites.google.com/site/tomyyan555/">  Yan Yan</a>,
+                <a href="http://www.robots.ox.ac.uk/~hbilen/">  Hakan Bilen</a>,
+                <a href="https://xmhe.bitbucket.io/">  Xuming He</a>,
+                <a href="https://sites.google.com/site/michaelyingyang/"> Michael Ying Yang</a>,
+                <a href="http://jvgemert.github.io/"> Jan van Gemert.</a> 
+                </p>
+
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!--Footer-->
+<footer id="footer">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span5 cp">
+                &copy; 2013 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>. All Rights Reserved.
+            </div>
+            <!--/Copyright-->
+
+            <div class="span1">
+                <a id="gototop" class="gototop pull-right" href="#"><i class="icon-angle-up"></i></a>
+            </div>
+            <!--/Goto Top-->
+        </div>
+    </div>
+</footer>
+<!--/Footer-->
+
+<script src="js/vendor/jquery-1.9.1.min.js"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<!-- Required javascript files for Slider -->
+<script src="js/jquery.ba-cond.min.js"></script>
+<script src="js/jquery.slitslider.js"></script>
+<!-- /Required javascript files for Slider -->
+
+<!-- SL Slider -->
+<script type="text/javascript"> 
+$(function() {
+    var Page = (function() {
+
+        var $navArrows = $( '#nav-arrows' ),
+        slitslider = $( '#slider' ).slitslider( {
+            autoplay : false
+        } ),
+
+        init = function() {
+            initEvents();
+        },
+        initEvents = function() {
+            $navArrows.children( ':last' ).on( 'click', function() {
+                slitslider.next();
+                return false;
+            });
+
+            $navArrows.children( ':first' ).on( 'click', function() {
+                slitslider.previous();
+                return false;
+            });
+        };
+
+        return { init : init };
+
+    })();
+
+    Page.init();
+});
+</script>
+<!-- /SL Slider -->
+</body>
 </html>

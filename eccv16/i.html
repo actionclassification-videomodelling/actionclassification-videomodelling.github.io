@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Brave new ideas in motion representations</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/sl-slide.css">
+
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script src="data/id2path.json" charset="utf-8"></script>
+    
+
+    <script src="js/animate.js"></script>
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+<body>
+
+    <!--Header-->
+    <header class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a id="logo" class="pull-left" href="index.html"></a>
+                <div class="nav-collapse collapse pull-right">
+                    <ul class="nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#program">Program</a></li>
+                        <li><a href="#dates">Dates</a></li>
+                        <li><a href="#submission">Submission</a></li> 
+                        <li><a href="#registration">Registration & Venue</a></li>
+                        <li><a href="#organizers">Organizers</a></li>
+                    </ul>        
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </header>
+    <!-- /header -->
+
+    <!--Slider-->
+    <section id="slide-show">
+     <div id="slider" class="sl-slider-wrapper">
+
+        <!--Slider Items-->    
+        <div class="sl-slider">
+            <!--Slider Item1-->
+            <div class="sl-slide item1" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+                <div class="sl-slide-inner">
+                    <div class="container">
+                        <canvas class="pull-right" height="420px" width="800px" id="aniCanvas"></canvas>
+                        <h2>Wanted:</h2>
+                        <h3 class="gap">New representations of motion</h3>
+                    </div>
+                </div>
+            </div>
+            <!--/Slider Item1-->
+
+    </div>
+    <!--/Slider Items-->
+
+
+</div>
+<!-- /slider-wrapper -->           
+</section>
+<!--/Slider-->
+
+<section id="about" >
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span9">
+                <h1>ECCV'16 Workshop on: <br/> Brave new ideas for motion representations in videos</h1>
+                <p class="lead">Together with the <a href="http://eccv2016.org/">European Conference on Computer Vision (ECCV)</a> 2016, Amsterdam.</p>
+                <h3>Description of the workshop and its relevance</h3>
+                <p class="lead">
+                In the late years Deep Learning has been a great force of change on most computer vision tasks. In video analysis problems, however, such as action recognition and detection, motion analysis and tracking, shallow architectures remain surprisingly competitive. What is the reason for this conundrum?  Larger datasets are part of the solution. The recently proposed Sports1M helped recently in the realistic training of large motion networks. Still, the breakthrough has not yet arrived.
+                </p>
+
+                <p class="lead">
+                Assuming that the recently proposed video datasets are large enough for training deep networks for video, another likely culprit for the standstill in video analysis is the capacity of the existing deep models. More specifically, the existing deep networks for video analysis might not be sophisticated enough to address the complexity of motion information. This makes sense, as videos introduce an exponential complexity as compared to static images. Unfortunately, state-of-the-art motion representation models are extensions of existing image representations rather than motion dedicated ones. Brave, new and motion-specific representations are likely to be needed for a breakthrough in video analysis.
+                </p>
+
+
+                <h3>Calling papers for brave new ideas</h3>
+                <p class="lead">
+                Attempting to publish a wild, but intriguing idea can be daunting, resulting in slow progress. On one hand a controversial new idea might be rejected by top-tier conferences, without the right experimental justification. On the other hand, researchers may not want to reveal a smart idea too soon in the fear of not receiving the right credit. To make amends with these two factors, the workshop will admit maximum 4-page papers describing novel, previously unseen ideas without necessarily requiring exhaustive quantitative justifications. Moreover, to make sure proper accreditation is given in the future, the workshop will have an open-review process, where all submitted papers should first be uploaded to arXiv.    
+                </p>
+
+                <h3>Expert speakers</h3>
+                <p class="lead">
+                To kickstart the discussion we have confirmed speakers from different fields that relate to the understanding and modelling of motion and sequence data: Computer Vision (Ivan Laptev), Machine Learning (Max Welling), Neuro-Science (Aman Saleem).
+                </p>
+
+                <h3>Topics</h3>
+                <p class="lead">
+                The workshop focuses on motion representations related, but not limited, to the following topics: </p>
+               
+               <p class="lead">
+                - Influence of motion in object recognition, object affordance, scene understanding.<br/>
+                - Object and optical flow<br/>
+                - Motion prediction, causal reasoning and forecasting<br/>
+                - Event and action recognition <br/>
+                - Spatio-temporal action localization<br/>
+                - Modeling human motion in videos and video streams<br/>
+                - Motion segmentation and saliency<br/>
+                - Tracking of objects in space and time<br/>
+                - Unsupervised action, actom discovery using ego motion<br/>
+                - Applications of motion understanding and video dynamics in sports, healthcare, autonomous driving, driver assistance and robotics<br/>
+                </p>
+
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="services">
+    <div class="container" id ="program">
+        <div class="row-fluid">
+            <div class="span9">
+                <h1>Program</h1>
+                <p class="lead">
+                Tentative schedule
+                </p>
+		<table class="lead" style="border-style: groove;width:1200px" border="1" >
+		<tr>
+			<th width="20%">Time</th>
+    			<th width="40%">Event</th>
+    			<th width="40%">Topic</th>
+  		</tr>
+		<tr><td>9.30 - 9.35   </td> <td> Welcome to the workshop </td> <td> Information</td> </tr>
+		<tr><td>9.35 - 10.20   </td> <td> Invited speaker - <a href="http://www.ics.uci.edu/~welling/"> Professor Max Welling</a> </td> <td> Motion and Unsupervised learning </td> </tr>
+		<tr><td>10.20 - 10.35  </td> <td> Coffee break/Poster session </td> <td> Poster session 1 </td> </tr>
+		<tr><td>10.35 - 11.20  </td> <td> Invited speaker -  <a href="http://www.saleemlab.com/">Dr. Aman Saleem</a> </td> <td> Motion from a Neuroscience perspective </td> </tr>
+		<tr><td>11.20 - 11.35  </td> <td> Oral paper 1  [Prize 1] </td> <td> 1st brave new idea </td> </tr>
+		<tr><td>11.35 - 11.50  </td> <td> Oral paper 2  [Honor. mention] </td> <td> 2nd brave new idea </td> </tr>
+		<tr><td>11.50 - 13.00  </td> <td> Lunch (on your own) </td> <td> Poster session </td> </tr>
+
+		<tr><td>13.00 - 13.45  </td> <td> Invited speaker - <a href="https://www.di.ens.fr/~laptev/">Professor Ivan Laptev</a>  </td> <td> Computer Vision and motion representations </td> </tr>
+		<tr><td>13.45 - 14.00  </td> <td> Coffee Break/Poster session  </td> <td> Poster session </td> </tr>
+                <tr><td>14.00 - 14.45  </td> <td> Invited speaker - <a href="http://graphics.tudelft.nl/~eisemann/">Professor Elmar Eisemann</a>  </td> <td> Motion representations from a graphics perspective.  </td> </tr>
+		<tr><td>14.45 - 15.00  </td> <td> Conclusion/Summary  </td> <td> A summary of the workshop and the related literature  </td> </tr>
+		<tr><td>15.00 - 17.00  </td> <td> Poster session  </td> <td> Poster session  </td> </tr>
+		
+		</table>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="dates">
+    <div class="container" >
+        <div class="center">
+            <h3>Important Dates</h3>
+            <p class="lead">Together with the <a href="http://eccv2016.org/">European Conference on Computer Vision (ECCV)</a> 2016, Amsterdam.</p>
+            <p class="lead">Date of the workshop: One full day among 8th, 9th, 16th October 2016</p>
+        </div>  
+        <div class="gap"></div>
+        <ul class="gallery col-4">
+            <!--Item 1-->
+	     <li>	
+             <p class="lead">Submission deadline</p>
+                <div class="desc">
+                    <h5>August 12, 2016</h5>
+                </div>
+            </li>
+            <!--/Item 1--> 
+
+            <!--Item 2-->
+            <li>
+                <p class="lead">Acceptance</p>
+                <div class="desc">
+                    <h5>September 2, 2016</h5>
+                </div>
+            </li>
+            <!--/Item 2-->
+
+            <!--Item 3-->
+            <li>
+                <p class="lead">Camera ready</p>
+                <div class="desc">
+                    <h5>September 9, 2016</h5>
+                </div>
+            </li>
+            <!--/Item 3--> 
+
+            <!--Item 4-->
+            <li>
+                <p class="lead">Workshop</p>
+                <div class="desc">
+                    <h5>TBA</h5>
+                </div>
+            </li>
+
+            <!--/Item 4-->               
+
+        </ul>
+    </div>
+
+</section>
+
+<section id="services">
+    <div class="container" id="submission">
+        <div class="row-fluid">
+            <div class="span9">
+
+                <h1>Submission</h1>                
+                <h3>Constructive discussion</h3>
+                <p class="lead">
+                The workshop's goal is a constructive, creative and open conversation. In principle we will accept all papers. All reviews will be made publicly available. Reviewers can choose to remain anonymous or to reveal their identity to encourage collaboration and positive feedback. We include poster presentations and will select a few of the best and bravest papers for an oral presentation. 
+                </p>
+
+		<h3>Instructions</h3>                
+                <p class="lead">
+		All papers should use provided <a href="http://users.cecs.anu.edu.au/~basura/workshop/latex_format.zip">latex format (latex_format.zip)</a> or similar text processing tool. We accept only PDF files. Papers should be only 4 pages including references. Example paper in PDF format can be downloaded <a href="http://users.cecs.anu.edu.au/~basura/workshop/format.pdf">here</a>. Paper submission is not anonymous. It is expected the authors would upload their papers to <a href="http://arxiv.org/">arxiv.org</a> first. We follow the "open review" policy. The reviews will be released online after the acceptance of the paper. All author names, emails and the institution should be mentioned just bellow the title of the paper.
+
+                </p>
+
+                <h3>Submit</h3>                
+                <p class="lead">
+                To submit your paper use <a href="http://beta.openreview.net/group?id=eccv2016.org/bnmw">OpenReview</a>.
+                </p>
+
+                <h3>Proceedings</h3>                
+                <p class="lead">
+                Accepted papers will be included in the Springer ECCV workshop proceedings.
+                </p>
+
+
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="registration">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span9">
+                <h1>Registration & venue</h1>
+                <p class="lead">The workshop is together with the <a href="http://eccv2016.org/">European Conference on Computer Vision (ECCV)</a> 2016, Amsterdam.</p>
+                <p class="lead">
+                 Accepted papers must have at least one registered author (this can be a student). Deadline for early registration is July, 31st 2016.
+                 </p>
+
+                <p class="lead">
+                  See registration Fee and other details: <a href="https://www.aanmelder.nl/eccv2016/subscribe"> https://www.aanmelder.nl/eccv2016/subscribe</a>. 
+                </p>
+
+                <p class="lead">
+                The workshop will be held at the <a href="http://www.uva.nl/en/about-the-uva/the-uva-in-amsterdam/locations/locations/locations/content/folder/roeterseiland/rec-b-c-d-entrance-b-c.html">Roeterseiland</a> location of the University of Amsterdam.<br>Nieuwe Achtergracht 166, 1018 WV Amsterdam.</p>
+
+              
+                <div align="center" id="img-eth"><a href="images/REC-foto.jpg" target="_blank"><img src="images/venue.jpg"></a></div>
+              
+
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="services">
+    <div class="container" id="organizers">
+        <div class="row-fluid">
+            <div class="span9">
+                <h1>Organizers</h1>
+                <p class="lead">
+                Basura Fernando, Stratis Gavves, Jan van Gemert. 
+                </p>
+
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!--Footer-->
+<footer id="footer">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span5 cp">
+                &copy; 2013 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>. All Rights Reserved.
+            </div>
+            <!--/Copyright-->
+
+            <div class="span1">
+                <a id="gototop" class="gototop pull-right" href="#"><i class="icon-angle-up"></i></a>
+            </div>
+            <!--/Goto Top-->
+        </div>
+    </div>
+</footer>
+<!--/Footer-->
+
+<script src="js/vendor/jquery-1.9.1.min.js"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<!-- Required javascript files for Slider -->
+<script src="js/jquery.ba-cond.min.js"></script>
+<script src="js/jquery.slitslider.js"></script>
+<!-- /Required javascript files for Slider -->
+
+<!-- SL Slider -->
+<script type="text/javascript"> 
+$(function() {
+    var Page = (function() {
+
+        var $navArrows = $( '#nav-arrows' ),
+        slitslider = $( '#slider' ).slitslider( {
+            autoplay : false
+        } ),
+
+        init = function() {
+            initEvents();
+        },
+        initEvents = function() {
+            $navArrows.children( ':last' ).on( 'click', function() {
+                slitslider.next();
+                return false;
+            });
+
+            $navArrows.children( ':first' ).on( 'click', function() {
+                slitslider.previous();
+                return false;
+            });
+        };
+
+        return { init : init };
+
+    })();
+
+    Page.init();
+});
+</script>
+<!-- /SL Slider -->
+</body>
+</html>
