@@ -62,7 +62,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="colorlib-navbar-brand">
-                <a class="colorlib-logo" href="index.html"><span class="logo-img" style="background-image: url(images/person_1.jpg);"></span>Action Classification and Video Modelling</a>
+                <a class="colorlib-logo" href="index.html"></span>Action Classification and Video Modelling</a>
               </div>
               <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
             </div>
@@ -83,7 +83,7 @@
           </div>
         </div>
 
-        <div class="slider-item js-fullheight">
+        <!-- <div class="slider-item js-fullheight">
           <div class="overlay"></div>
           <div class="container">
             <div class="row slider-text align-items-center text-center justify-content-center" data-scrollax-parent="true">
@@ -94,7 +94,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- END slider -->
 
       <section class="ftco-section about-section">
@@ -106,14 +106,24 @@
               <div class="about-desc">
                 <h1 class="bold-text">About</h1>
                 <div class="p-5">
-                  <h2 class="mb-5">Hi! I'm Beckham Muff</h2>
-                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in.</p>
-                  <p><a href="#">Checkout my resume</a></p>
+                  <h2 class="mb-5">Description of the Tutorial</h2>
+                  <p>In the late years Deep Learning has been a great force of change on most Computer Vision and Machine Learning tasks. 
+                  In video analysis problems, such as action recognition and detection, motion analysis and tracking, the progress has arguably been slower, with shallow models remaining surprisingly competitive.
+                  Recent developments~\cite{Tran2014, Feichtenhofer2016, Carreira2017, tran2015learning, Bilen2017, GhodratiGS18, FeichtenhoferPW18, Simonyan2014, KalchbrennerOSD17} have demonstrated that careful model design and end-to-end model training, as well as large and well-annotated datasets, have finally led to strong results using deep architectures for video analysis. 
+                  However, the details and the secrets to achieve good accuracies with deep models are not always transparent. 
+                  Furthermore, it is not always clear whether the networks resulting from end-to-end training are truly providing better video models or if instead are simply overfitting their large capacity to the idiosyncrasies of each dataset. </p>
+                  <p><a href="#">This tutorial aims at giving answers to the aforementioned questions.
+                  Specifically, the core topics to be explored are</a></p>
                   <ul class="ftco-footer-social list-unstyled mt-4">
-                    <li><a href="#"><span class="icon-twitter"></span></a></li>
-                    <li><a href="#"><span class="icon-facebook"></span></a></li>
-                    <li><a href="#"><span class="icon-instagram"></span></a></li>
+                    <li><a href="#">What are the state-of-the-art video representations and action classification models and how does one train them?</a></li>
+                    <li><a href="#">What does constitute a strong video representation?</a></li>
+                    <li><a href="#">Are short and long videos to be treated equally when training action classifiers?</a></li>
+                    <li><a href="#">Are shallow models still relevant for state-of-the-art classification?</a></li>
+                    <li><a href="#">How to train an action classification system in an unsupervised manner, when supervised labels are not enough?</a></li>
+                    <li><a href="#">Relevant benchmarks and challenges </a></li>
                   </ul>
+                  <p>This tutorial is organized by experts on action classification and video representation learning: a) Dr. E. Gavves, Assistant Professor in the University of Amsterdam, The Netherlands, b) J. Carreira, Research Scientist in DeepMind, UK, c) Dr. B. Fernando, Research Scientist A*Star, Singapore, d) Dr. C. Feichtenhofer, Senior Researcher in Facebook FAIR, US and, e) Dr. L. Torresani, Associate Professor at Dartmouth College and Research Scientist at Facebook FAIR, USA.
+                  </p>
                   <h5>Contact me here!</h5>
                   <p>Email: <a href="#">beckham@email</a></p>
                   <p>Phone: <a href="#">(123)-456-789</a></p>
@@ -124,7 +134,33 @@
         </div>
       </section>
 
-      <section class="ftco-section">
+      <section class="ftco-section topics-section">
+        <div class="container">
+          <div class="row d-flex" data-scrollax-parent="true">
+            <!-- <div class="col-md-4 author-img" style="background-image: url(images/author-1.jpg);" data-scrollax=" properties: { translateY: '-70%'}"></div> -->
+            <div class="col-md-2"></div>
+            <div class="col-md-6 wrap ftco-animate">
+              <div class="about-desc">
+                <h1 class="bold-text">Topics</h1>
+                <div class="p-5">
+                  <h2 class="mb-5">Topics</h2>
+                  <p><a href="#">The tutorial focuses on the following topics:</a></p>
+                  <ul class="ftco-footer-social list-unstyled mt-4">
+                    <li><a href="#">Deep learning for action classification and optical flow. Discuss the latest modern deep networks for action classification, including C3D (Tran et al., 2014), I3D (Carreira et al. 2017), Two-Stream models (Simonyan et al. 2014), Two-stream-fusion (Feichtenhofer et al., 2016), Dynamic Images(Bilen et al., 2016).</a></li>
+                    <li><a href="#">Deep networks for video modeling. Discuss and analyze various options for modeling videos, including TSN (Wang et al., 2018), spatiotemporal (Tran et al. 2015) and factorized spatiotemporal convolutions (Tran et al., 2018), TimeAligned DenseNets (Ghodrati et al., 2018), Dynamic Image Networks (Bilen et al. 2017)</a></li>
+                    <li><a href="#">Deep spatiotemporal models beyond classification. While in the Computer Vision community video models have been designed primarily for action classification, their applicability extends to video generative models (Kalchbrenner et al., 2017), video compression (Wu et al., 2018), visualization (Feichtenhofer et al., 2018), velocity estimation (Kampelmuhler et al., 2018), tracking (Tao et al., 2016) and spatiotemporal object detection (Feichtenhofer et al., 2017), and future video prediction (Ghodrati et al., 2018).</a></li>
+                    <li><a href="#">Unsupervised video representation learning. Analogously to the still-image domain, even for video it has been customary to fine-tune pretrained video models on the target dataset. However, this is not always optimal, due to large gaps between the source and the target domain~\cite{ (Shkodrani et al., 2018) or because of unconventional architectures (Ghodrati et al., 2018). More importantly, while supervised learning certainly results in highly accurate models, it does not take advantage of the plethora of unlabelled video available. We discuss alternatives on training video representations models either in an unsupervised or self-supervised manner, including arrow-of-time (Wei et al., 2018), audio-video synchronization, or odd-one-out models (Fernando et al., 2017).</a></li>
+                    <li><a href="#">Long-term video understanding. The majority of action classification and video representation systems focus on rather short video sequences, typically no more than 10 seconds long. However, applications often require processing much longer videos, or even streaming videos. We discuss models that are specifically designed to handle long videos and capture the spatiotemporal intricacies involved, like Timeception (Hussein et al, 2019) and VideoGraph (Hussein et al., 2019).</a></li>
+                    <li><a href="#">Large-scale video processing and evaluation. Careful evaluation of action classifiers and video representations is crucial for developing the next generation of models. Interestingly, while current benchmarks do measure well the accuracy of action classifiers, it is not always clear how to evaluate the capacity of temporal models in modeling the sequence itself. We discuss various benchmarks and frameworks for evaluating action classification, as well as for evaluating directly video representations.</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section class="ftco-section">
         <div class="container">
           <div class="row justify-content-center mb-5 pb-5">
             <div class="col-md-7 text-center heading-section ftco-animate">
@@ -297,7 +333,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       
       <footer class="ftco-footer ftco-bg-dark ftco-section">
         <div class="container">
@@ -312,7 +348,7 @@
               </div>
               <div class="ftco-footer-widget">
                 <h2 class="mb-3">Contact Us</h2>
-                <p class="h3 email"><a href="#">info@email.com</a></p>
+                <p class="h3 email"><a href="#">egavves@uva.nl</a></p>
               </div>
             </div>
           </div>
