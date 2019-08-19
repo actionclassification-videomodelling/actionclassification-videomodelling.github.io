@@ -1,0 +1,8 @@
+2019-08-15.16-42-14 clear
+2019-08-15.16-47-27 mv ~/Downloads/LT_tutorial*.pdf .
+2019-08-15.16-49-23 mv ~/Downloads/tutorial_joao.pdf .
+2019-08-15.16-50-28 mv ~/Downloads/Action_ClsDet_Tutorial_CVPR19.pdf .
+2019-08-15.16-54-53 mv ~/Downloads/CVPR2019-Action-Video-tutorial-*.pdf .
+2019-08-15.16-56-58 mv CVPR2019-Action-Video-tutorial-revisiting\ video\ modelling.pdf CVPR2019-Action-Video-tutorial-revisiting-video-modelling.pdf 
+2019-08-15.16-58-00 mv CVPR2019-Action-Video-tutorial-self-supervised\ and\ multimodal\ video\ modelling.pdf CVPR2019-Action-Video-tutorial-self-supervised-and-multimodal-video-modelling.pdf 
+2019-08-15.17-00-44 git add *.pdf
